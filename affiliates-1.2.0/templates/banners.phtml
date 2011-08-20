@@ -1,0 +1,92 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/
+
+?>
+
+<div id="tabs" class="wide">
+  <ul>
+    <li><a href="#details"><span><?php echo __('Link Details') ?></span></a></li>
+    <li><a href="#banner"><span><?php echo __('Choose Banner') ?></span></a></li>
+  </ul>
+  <div id="details">
+    <form>
+      <span id="defaultbanner" style="display: none"><?php
+        echo $v->banners[0]['id'] ?></span>
+      <span id="bannerscript" style="display: none"><?php
+        echo $v->banner_script ?></span>
+      <span id="refparam" style="display: none"><?php
+        echo $v->refparam ?></span>
+      <span id="dataparam" style="display: none"><?php
+        echo $v->dataparam ?></span>
+      <table class="form">
+        <tr>
+          <td class="largecelllabel"><?php echo __('Chosen banner:') ?></td>
+          <td class="largecell" colspan="2">
+            <img id="chosenbanner" src="servebanner.php"/>
+            <input id="changebanner" type="submit" value="<?php echo __('Change') ?>"/>
+          </td>
+        </tr>
+        <tr>
+          <td><?php echo __('Campaign ID:') ?></td>
+          <td class="mergeright">&nbsp;</td>
+          <td class="mergeleft">
+            <input id="campaignid" type="text" size="20"/>
+          </td>
+        </tr>
+        <tr>
+          <td><?php echo __('Link Target:') ?></td>
+          <td class="mergeright">
+            <span id="baseurl"><?php echo $v->store_home ?></span>
+          </td>
+          <td class="mergeleft">
+            <input id="linktarget" type="text" size="20"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="largecelllabel"><?php echo __('To display your banner, copy this code to your website:') ?></td>
+          <td class="largecell" colspan="2">
+            <textarea id="code" cols="40" rows="10" readonly="1"></textarea>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="banner">
+    <p>
+    	<?php 
+			echo __('This page shows all the available banners.').' ';
+			echo __('Please click the one you would like to use.').' ';
+			echo __('You will then be taken back to the Link Details screen').', ';
+			echo __('where you can finish creating your affiliate link.').' ';
+		?>
+	</p>
+
+    <?php foreach($v->banners as $banner) { ?>
+      <span id="name_<?php echo $banner['id'] ?>" style="display: none"><?php
+        echo $banner['name'] ?></span>
+      <span id="target_<?php echo $banner['id'] ?>" style="display: none"><?php
+        echo $banner['link_target'] ?></span>
+      <img id="banner_<?php echo $banner['id'] ?>" class="banner"
+        src="servebanner.php?name=<?php echo $banner['name'] ?>"/>
+    <?php } ?>
+  </div>
+</div>

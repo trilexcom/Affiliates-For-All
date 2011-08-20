@@ -1,0 +1,45 @@
+#!/bin/sh
+
+FILES=`find . -name \*.php -o -name \*.phtml -o -name \*.inc | cut -c3-`
+
+rm -rf tempfiles
+for FILE in $FILES; do
+  NEW_FILE=`echo $FILE | awk '{ $(NF)=toupper($(NF)); print }' FS=. OFS=.`
+  sed 's/__(/gettext(/g' < $FILE > $NEW_FILE
+  echo $NEW_FILE >> tempfiles
+done
+
+DIR=locale/$1/LC_MESSAGES
+
+egrep -v '^#:' $DIR/messages.po > $DIR/messages.po~
+mv -f $DIR/messages.po~ $DIR/messages.po
+egrep -v '^# unused$' $DIR/messages.po > $DIR/messages.po~
+mv -f $DIR/messages.po~ $DIR/messages.po
+awk '/^ *$/ { nextfile } { print }' < $DIR/messages.po > $DIR/header.po
+
+xgettext -L php -j -p $DIR `cat tempfiles`
+
+awk '
+BEGIN		{ printing = 0 }
+/^ *$/		{ printing = 1 }
+printing	{ print }
+' < $DIR/messages.po > $DIR/messages.po~
+mv -f $DIR/messages.po~ $DIR/messages.po
+
+cat $DIR/header.po $DIR/messages.po > $DIR/messages.po~
+mv -f $DIR/messages.po~ $DIR/messages.po
+rm -f $DIR/header.po
+
+awk '
+BEGIN		{ obsolete = 0 }
+/^msgid /	{ if(obsolete) print "# unused"; obsolete = 1 }
+/^#:/		{ obsolete = 0; print tolower($0); next }
+		{ print }
+' < $DIR/messages.po > $DIR/messages.po~
+
+mv -f $DIR/messages.po~ $DIR/messages.po
+
+for FILE in `cat tempfiles`; do
+  rm -f $FILE
+done
+rm -f tempfiles

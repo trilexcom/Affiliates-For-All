@@ -1,0 +1,133 @@
+<?php
+
+// This parameter is used in affiliate links, and contains the affiliate
+// number.  For example, a link might look like http://...?ref=123 for
+// affiliate 123.
+
+$affiliate_referrer_parameter = 'ref';
+
+// This parameter is also used in affiliate links, and carries the affiliate's
+// own data.  For example, it might contain the user's search keywords, to
+// allow for optimisation of a PPC campaign.
+
+$affiliate_data_parameter = 'data';
+
+// The name of the cookie which stores the referring affiliate:
+
+$affiliate_cookie = 'affiliate';
+
+// The lifetime of the cookie:
+
+$cookie_lifetime = 30 /* days */;
+
+// The hostname for which the affiliate cookie should be set.  You should leave
+// this unchanged unless your checkout is on a different domain to your store.
+// For example, if you have http://www.example.com for your store and
+// https://secure.example.com for your checkout, you should set
+// $cookie_domain to example.com.
+//
+// Note that AfA will not work at all if the store and cart are on completely
+// different domains.  For example, you might have http://www.example.com for
+// your store, and https://example.mysecureserver.com for your checkout.  This
+// configuration will not work.
+
+$cookie_domain = '';
+
+// The currency symbol and SWIFT code:
+
+$currency = '$';
+$currency_code = 'USD';
+
+// This should be set to the base of your Magento installation:
+
+$store_home = 'http://www.example.com/store';
+
+// You can give a fixed amount of commission per order, or you can give a
+// percentage.  If you give both, they add.  Set these variables to the
+// percentage rate and the fixed amount which you want to pay to your
+// affiliates:
+
+$commission_percent = 10;
+$commission_fixed = '1.00';
+
+// Set this to the name of your affiliate programme.  It will be shown at the
+// top of all the screens used by affiliates:
+
+$affiliate_programme_name = 'Affiliates for All';
+
+// If you want affiliates to share revenue for all the orders their customers
+// place, set the following to TRUE.  If you only want them to receive revenue
+// share when customers have an affiliate cookie set on their browsers, set
+// it to FALSE.
+//
+// For example, suppose an affiliate introduces customer X.  X places an order
+// and the affiliate receives commission.  After that, X changes browser,
+// meaning that he no longer has an affiliate cookie set.  He then places
+// another order.  If this variable is TRUE, the affiliate receives commission
+// on this order too (provided X uses the same account of course).  If this
+// variable is FALSE, he does not.
+
+$lifetime_revenue_share = TRUE;
+
+
+// If you want to be notified when AfA accepts an order, or marks an order
+// shipped, enter an email address here:
+
+$notification_email_address = 'example-notify@affiliatesforall.org';
+
+// If you don't want these notifications, leave the email address out, by
+// changing the above line to read:
+// $notification_email_address = '';
+
+
+// The following address is used as the sender for these email notifications,
+// and also for email notifications sent to affiliates:
+
+$administrator_email_address = 'example-admin@affiliatesforall.org';
+
+// You *must* change this to an email address which you control, as
+// you will not be considered a legitimate mail sender for
+// affiliatesforall.org.  As a result many mail servers would consider your
+// notifications to be spam.
+
+
+// Affiliates can be given full or restricted information about the referred
+// customers and their orders.  The fields you want to reveal should be placed
+// in this list:
+
+$order_fields_available =
+    'id, status, customer_id, customer_name, customer_email, total, ' .
+    'commission, date_entered, affiliate_data';
+$order_fields_headings =
+    'Order Number, Status, Cust ID, Cust Name, Cust Email, Total, ' .
+    'Commission, Order Date, Campaign Data';
+
+// The following secret is used to secure communications between the shopping
+// cart and the affiliate system.  Just choose something that will be hard to
+// guess.
+
+$rpc_secret = 'changeme';
+
+// Fill in the settings for your database below.  Note that all testing has
+// been carried out on MySQL 5.0.
+
+$database_dsn = 'mysql:dbname=affiliates;host=127.0.0.1';
+$database_username = 'affiliates';
+$database_password = '';
+
+// This is the name of the cookie which is used for AfA sessions.  (It is set
+// for affiliates and administrators, but not customers of your web shop.)
+// If you run two instances of AfA on the same domain, you should change it
+// for at least one of them, as otherwise they could interfere with each other.
+
+$session_cookie_name = 'AfASESSID';
+
+// The timezone where AfA is running:
+
+date_default_timezone_set('Europe/London');
+
+// Affiliates will be asked to agree to the following terms of business:
+
+$terms_of_business = <<<end
+<p>Terms of business go here, with HTML markup.</p>
+end;
