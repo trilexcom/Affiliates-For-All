@@ -1,0 +1,776 @@
+# Affiliates for All French translation by Denis <dgaudare@free.fr>
+# Copyright (C) 2009 Denis Gaudare
+# Copyright (C) 2009 Pete Chown
+# This file is distributed under the same license as Affiliates for All.
+# FIRST AUTHOR Denis <dgaudare@free.fr>, 2009.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Affiliates for All 1.2.0\n"
+"Report-Msgid-Bugs-To: http://www.affiliatesforall.org/forums/viewforum.php?f=3\n"
+"POT-Creation-Date: 2009-04-08 16:18+0100\n"
+"PO-Revision-Date: 2009-04-08 16:18+0100\n"
+"Last-Translator: Denis <dgaudare@free.fr>\n"
+"Language-Team: French <french-language@affiliatesforall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: public/account.php:28
+msgid "Account Settings"
+msgstr "Param&eacute;trages Compte"
+
+#: public/index.php:29
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: templates/account.phtml:27
+msgid "Terms of Business"
+msgstr "Conditions d'utilisation"
+
+#: templates/account.phtml:30
+msgid "Password"
+msgstr "Mot de passe"
+
+#: templates/account.phtml:36
+msgid "Thank you for signing up."
+msgstr "Merci de votre inscription."
+
+#: templates/account.phtml:37
+msgid ""
+"Below, you will find the terms and conditions for our affiliate programme."
+msgstr ""
+"Ci dessous, vous trouverer les conditions generales d'utilisation de notre "
+"programme d'affiliation."
+
+#: templates/account.phtml:38
+msgid ""
+"Please read through them, and indicate your agreement by clicking the button "
+"at the bottom."
+msgstr ""
+"Merci de les lire attentivement, et d'indiquer votre accord en cliquant sur "
+"le bouton en fin "
+
+#: templates/account.phtml:39
+msgid ""
+"Once you have done that, we will need to get some contact details, and then "
+"your account will be fully active."
+msgstr ""
+"Une fois cela effectu&eacute; nous vous demanderons quelques informations, "
+"&aacute; la suite de quoi, votre compte sera activi&eacute"
+
+#: templates/account.phtml:41
+msgid ""
+"For your reference, here are the terms and conditions for our affiliate "
+"programme:"
+msgstr ""
+"Pour information, voici les termes et conditions d'utilisation de notre "
+"programme d'affiliation"
+
+#: templates/account.phtml:54
+msgid "I Agree"
+msgstr "Acceptez"
+
+#: templates/account.phtml:69
+msgid "Affiliate ID:"
+msgstr "ID Affili&eacute;"
+
+#: templates/account.phtml:73 templates/index.phtml:31
+msgid "Username:"
+msgstr "Utilisateur:"
+
+#: templates/account.phtml:77
+msgid "Your Name:"
+msgstr "Votre nom:"
+
+#: templates/account.phtml:81
+msgid "Title:"
+msgstr "Titre:"
+
+#: templates/account.phtml:82
+msgid "First Name:"
+msgstr "Pr&eacute;nom:"
+
+#: templates/account.phtml:83
+msgid "Last Name:"
+msgstr "Nom:"
+
+#: templates/account.phtml:105
+msgid "Your Email Address:"
+msgstr "Votre adresse email:"
+
+#: templates/account.phtml:112
+msgid "Check this box to receive order updates by email."
+msgstr "Cochez pour recevoir les mises &agrave; jour commandes par email."
+
+#: templates/account.phtml:116
+msgid "Your Address:"
+msgstr "Votre adresse:"
+
+#: templates/account.phtml:133
+msgid "Your Postcode:"
+msgstr "Votre code postal:"
+
+#: templates/account.phtml:140
+msgid "Your Country:"
+msgstr "Votre pays:"
+
+#: templates/account.phtml:163
+msgid "Save Details"
+msgstr "Enregister:"
+
+#: templates/admin-affiliates.phtml:62 templates/account.phtml:169
+#: templates/admin-orders.phtml:81
+msgid "are required."
+msgstr "sont requis."
+
+#: templates/account.phtml:175
+msgid "New Password:"
+msgstr "Nouveau mot de passe:"
+
+#: templates/account.phtml:179
+msgid "Confirm New Password:"
+msgstr "Confirmer le mot de passe:"
+
+#: templates/account.phtml:190
+msgid "Change Password"
+msgstr "Changer de mot de passe"
+
+#: templates/account.phtml:200
+msgid "PayPal ID:"
+msgstr "ID Paypal:"
+
+#: templates/account.phtml:216
+msgid "Your PayPal ID will be an email address."
+msgstr "Votre identifiant Paypal est une adresse email."
+
+#: templates/account.phtml:217
+msgid "Enter the whole of that email address in the box above"
+msgstr ""
+"Saisisser cet email dans son integralit&eacute; dans le champ ci-dessus"
+
+#: templates/account.phtml:219
+msgid "for example"
+msgstr "par exemple"
+
+#: templates/account.phtml:221
+msgid "If you dont put anything in the box"
+msgstr "Si vous laissez ce champ vide"
+
+#: templates/account.phtml:223
+msgid "you will not be paid"
+msgstr "vous  ne serez pas directement pay&eacute;"
+
+#: templates/account.phtml:225
+msgid "but your earnings will be carried forward until you claim them."
+msgstr "vos gains seront conserv&eacute;s jusqu'&agrave; votre demande express"
+
+#: templates/account.phtml:232
+msgid "Could not Change Password"
+msgstr "Impossible de modifier le mot de passe"
+
+#: templates/account.phtml:232
+msgid "Please choose a new password and enter it in both the boxes."
+msgstr ""
+"Choisisser un nouveau mot de passe et saisisser le dans les deux champs "
+"prevus."
+
+#: templates/account.phtml:234
+msgid "Settings Updated"
+msgstr "Parametres mis a jour"
+
+#: templates/account.phtml:234
+msgid "Your details have been set."
+msgstr "Vos coordonn&eacute;es sont enregistr&eacute;es"
+
+#: templates/admin-payments.phtml:89 templates/admin-affiliates.phtml:78
+#: templates/account.phtml:236 templates/admin-orders.phtml:89
+msgid "Required Fields Empty"
+msgstr "Champ(s) requis vide(s)"
+
+#: templates/account.phtml:236
+msgid "Please complete all required fields, marked"
+msgstr "Merci de remplir tous les champs marqu&eacute;s"
+
+#: templates/account.phtml:238
+msgid "Password Changed"
+msgstr "Mot de passe modifi&eacute;"
+
+#: templates/account.phtml:238
+msgid "Your password has been changed."
+msgstr "Votre mot de passe est enregist&eacute;."
+
+#: templates/account.phtml:240
+msgid "Details Updated"
+msgstr "Coordonn&eacute;es mises &agrave; jour"
+
+#: templates/account.phtml:240
+msgid "Your PayPal ID has been set."
+msgstr "Identifiant Paypal enregistr&eacute;."
+
+#: templates/account.phtml:242
+msgid "Account Activated"
+msgstr "Compte Actif"
+
+#: templates/account.phtml:242
+msgid "Thank you for providing these details. Your account is now active."
+msgstr "Merci d'avoir rempli vos coordonn&eacute;es. Votre compte est actif."
+
+#: templates/admin-affiliates.phtml:60 templates/account.phtml:169
+#: templates/admin-orders.phtml:79
+msgid "Fields marked"
+msgstr "Champs marqu&eacute;s"
+
+#: templates/account.phtml:155
+msgid "Your Phone Number:"
+msgstr "Votre t&eacute;l&eacute;phone:"
+
+#: public/admin-overview.php:28 templates/menu.phtml:25
+msgid "Site Overview"
+msgstr "Vue d'Ensemble"
+
+#: public/admin-affiliates.php:59 templates/menu.phtml:26
+#: templates/admin-affiliates.phtml:28
+msgid "Affiliates"
+msgstr "Affili&eacute;s"
+
+#: public/banners.php:27 public/admin-banners.php:29 templates/menu.phtml:27
+#: templates/menu.phtml:36
+msgid "Banners"
+msgstr "Banni&egrave;res"
+
+#: public/admin-orders.php:57 templates/menu.phtml:28
+msgid "All Orders"
+msgstr "Commandes"
+
+#: public/admin-payments.php:42 templates/menu.phtml:29
+msgid "All Payments"
+msgstr "Paiements"
+
+#: templates/menu.phtml:30
+msgid "Back"
+msgstr "Retour"
+
+#: public/overview.php:27 templates/menu.phtml:32
+msgid "Overview"
+msgstr "Vue d'Ensemble"
+
+#: templates/menu.phtml:33
+msgid "Your Account"
+msgstr "Votre Compte"
+
+#: public/orders.php:27 templates/menu.phtml:39
+msgid "Your Orders"
+msgstr "Vos Commandes"
+
+#: public/payments.php:27 templates/menu.phtml:40
+msgid "Your Payments"
+msgstr "Vos Paiements"
+
+#: templates/menu.phtml:47
+msgid "Log Out"
+msgstr "D&eacute;connexion"
+
+#: templates/tail.phtml:24
+msgid "Powered by Affiliates for All"
+msgstr "Fonctionne gr&acirc;ce &agrave; Affiliates for All"
+
+#: templates/tail.phtml:26
+msgid "open source affiliate software"
+msgstr "syst&egrave;me d'affiliation open source"
+
+#: templates/tail.phtml:31
+msgid "copyright"
+msgstr "tous droits r&eacute;s&eacute;rv&eacute;s"
+
+#: templates/admin-payments.phtml:25 templates/daterange.phtml:24
+#: templates/admin-orders.phtml:25
+msgid "Date Range"
+msgstr "Dates"
+
+#: templates/admin-payments.phtml:26 templates/daterange.phtml:25
+#: templates/admin-orders.phtml:26
+msgid "Results"
+msgstr "R&eacute;sultats"
+
+#: templates/admin-payments.phtml:42 templates/daterange.phtml:47
+#: templates/admin-orders.phtml:42
+msgid "Display"
+msgstr "Afficher"
+
+#: templates/admin-payments.phtml:43 templates/daterange.phtml:49
+#: templates/admin-overview.phtml:60 templates/admin-orders.phtml:43
+msgid "Download"
+msgstr "Telecharger"
+
+#: templates/admin-payments.phtml:54 templates/admin-affiliates.phtml:35
+#: templates/daterange.phtml:60 templates/admin-orders.phtml:54
+msgid "of"
+msgstr "de"
+
+#: templates/admin-payments.phtml:54 templates/admin-affiliates.phtml:35
+#: templates/daterange.phtml:60 templates/admin-orders.phtml:54
+msgid "Go to:"
+msgstr "Aller &agrave;"
+
+#: templates/admin-payments.phtml:55 templates/admin-affiliates.phtml:36
+#: templates/daterange.phtml:61 templates/admin-orders.phtml:55
+msgid "Previous Page"
+msgstr "Page pr&eacute;c&eacute;dente"
+
+#: templates/admin-payments.phtml:56 templates/admin-affiliates.phtml:37
+#: templates/daterange.phtml:62 templates/admin-orders.phtml:56
+msgid "Next Page"
+msgstr "Page suivante"
+
+#: templates/admin-payments.phtml:87 templates/admin-payments.phtml:88
+#: templates/admin-affiliates.phtml:74 templates/admin-affiliates.phtml:76
+#: templates/daterange.phtml:70 templates/daterange.phtml:71
+#: templates/admin-orders.phtml:87 templates/admin-orders.phtml:88
+msgid "No More Data"
+msgstr "Plus de donn&eacute;es"
+
+#: templates/admin-payments.phtml:87 templates/admin-affiliates.phtml:74
+#: templates/daterange.phtml:70 templates/admin-orders.phtml:87
+msgid "You are already on the first page."
+msgstr "Vous etes dej&agrave; sur la premi&egrave;re page"
+
+#: templates/admin-payments.phtml:88 templates/admin-affiliates.phtml:76
+#: templates/daterange.phtml:71 templates/admin-orders.phtml:88
+msgid "You are already on the last page."
+msgstr "Vous etes dej&agrave; sur le derni&egrave;re page"
+
+#: templates/index.phtml:24 templates/index.phtml:40
+msgid "Log On"
+msgstr "Connexion"
+
+#: templates/index.phtml:25 templates/index.phtml:79
+msgid "Sign Up"
+msgstr "Inscription"
+
+#: templates/index.phtml:35
+msgid "Password:"
+msgstr "Mot de passe:"
+
+#: templates/index.phtml:50
+msgid "Choose a username:"
+msgstr "Choisissez un nom d'utilisateur"
+
+#: templates/index.phtml:61
+msgid "Choose a password:"
+msgstr "Choisissez un mot de passe"
+
+#: templates/index.phtml:67
+msgid "Confirm password:"
+msgstr "Confirmez le mot de passe"
+
+#: templates/index.phtml:85
+msgid "Your username is used for logging on"
+msgstr "Votre utilisateur sert a vous connecter"
+
+#: templates/index.phtml:87
+msgid "but it is not used in your affiliate links."
+msgstr "mais n'est pas utilis&eacute; dans les liens d'affiliation."
+
+#: templates/index.phtml:88
+msgid "This means you can keep your username private"
+msgstr ""
+"Cela signifie que vous ne conservez votre identit&eacute; secr&egrave;te"
+
+#: templates/index.phtml:90
+msgid "if you want to."
+msgstr "si vous le souhaitez."
+
+#: templates/index.phtml:97
+msgid "Form Incomplete"
+msgstr "Formulaire incomplet"
+
+#: templates/index.phtml:99
+msgid "Before clicking Sign Up"
+msgstr "Avant de cliquer sur Inscription"
+
+#: templates/index.phtml:100
+msgid "you will need to choose a username"
+msgstr "vous devez choisir un nom d'utilisateur"
+
+#: templates/index.phtml:102
+msgid "that has not been taken already"
+msgstr "qui n'est pas d&eacute;j&agrave; utilis&eacute;"
+
+#: templates/index.phtml:104
+msgid "and then enter the same password in the two other boxes."
+msgstr "et ensuite saisir le mot de passe deux fois."
+
+#: templates/index.phtml:108
+msgid "Logon Failed"
+msgstr "Echec de connexion"
+
+#: templates/index.phtml:108
+msgid "The username and password you entered were not recognised."
+msgstr "L'utilisateur et/ou mot de passe saisis ne sont pas reconnus."
+
+#: templates/overview.phtml:25 templates/admin-overview.phtml:25
+msgid "Summary"
+msgstr "Synth&egrave;se"
+
+#: templates/overview.phtml:26
+msgid "Commission Graphs"
+msgstr "Graphiques Commissions"
+
+#: templates/overview.phtml:27
+msgid "Order Graphs"
+msgstr "Graphiques Commandes"
+
+#: templates/overview.phtml:32 templates/admin-overview.phtml:34
+msgid "Total Orders:"
+msgstr "Total Commandes:"
+
+#: templates/overview.phtml:36 templates/admin-overview.phtml:38
+msgid "Total Commission:"
+msgstr "Total Commissions:"
+
+#: templates/overview.phtml:40 templates/admin-overview.phtml:42
+msgid "Commission Paid:"
+msgstr "Commissions Pay&eacute;es:"
+
+#: templates/overview.phtml:44 templates/admin-overview.phtml:46
+msgid "Commission Payable:"
+msgstr "Commissions A Payer:"
+
+#: templates/overview.phtml:48
+msgid "Your Affiliate Link:"
+msgstr "Votre lien Affili&eacute;:"
+
+#: templates/overview.phtml:52
+msgid "Affiliate Link with Campaign ID:"
+msgstr "Lien affiliation avec ID Campagne:"
+
+#: templates/admin-affiliates.phtml:29
+msgid "Affiliate Details"
+msgstr "D&eacute;tails Affili&eacute;s"
+
+#: templates/admin-payments.phtml:54 templates/admin-payments.phtml:57
+#: templates/admin-affiliates.phtml:38 templates/daterange.phtml:60
+#: templates/daterange.phtml:63 templates/admin-orders.phtml:54
+#: templates/admin-orders.phtml:57
+msgid "Page"
+msgstr "Page"
+
+#: templates/admin-affiliates.phtml:64
+msgid "If you add a new affiliate"
+msgstr "Si vous ajoutez un nouvel affili&eacute;"
+
+#: templates/admin-affiliates.phtml:66
+msgid "an affiliate number will be assigned automatically when you click"
+msgstr "un identifiant lui sera assigné automatiquement en cliquant"
+
+#: templates/admin-affiliates.phtml:68
+msgid "Save."
+msgstr "Enregistrer."
+
+#: templates/admin-affiliates.phtml:78 templates/admin-orders.phtml:89
+msgid "Please complete all required fields marked"
+msgstr "Merci de remplir tous les champs marqu&eacute;s"
+
+#: templates/admin-payments.phtml:90 templates/admin-affiliates.phtml:80
+#: templates/admin-orders.phtml:90
+msgid "Invalid Data"
+msgstr "Donn&eacute;e(s) invalide(s)"
+
+#: templates/admin-payments.phtml:91 templates/admin-affiliates.phtml:82
+#: templates/admin-orders.phtml:91
+msgid "Changes Saved"
+msgstr "Changements enregistr&eacute;s"
+
+#: templates/admin-payments.phtml:91 templates/admin-affiliates.phtml:82
+#: templates/admin-orders.phtml:91
+msgid "The information you entered has been saved."
+msgstr "L'information a &eacute;t&eacute; sauvegard&eacute;e"
+
+#: templates/admin-payments.phtml:92 templates/admin-affiliates.phtml:84
+#: templates/admin-banners.phtml:136 templates/admin-orders.phtml:92
+msgid "Are you sure?"
+msgstr "Ets vous sur?"
+
+#: templates/admin-payments.phtml:92 templates/admin-affiliates.phtml:84
+#: templates/admin-orders.phtml:92
+msgid "Are you sure you want to delete this record?"
+msgstr "Etes vous sur de vouloir effacer cet enregistrement?"
+
+#: templates/admin-banners.phtml:29
+msgid "Current Banners"
+msgstr "Banni&egrave;res courantes"
+
+#: templates/admin-banners.phtml:30
+msgid "Add New Banner"
+msgstr "Ajouter une banni&egrave;re"
+
+#: templates/admin-banners.phtml:35
+msgid ""
+"This tab allows configuration of the banners which have been loaded into "
+"Affiliates for All."
+msgstr ""
+"Cet onglet permet de configurer les banni&eagrave; charg&eacute; dans "
+"Affiliates for All"
+
+#: templates/admin-banners.phtml:37
+msgid "Note that the banner name will be used in affiliates links."
+msgstr ""
+"Notez que le nom de la banni&eagrave;re sera utilis&eacute; dans les liens "
+"affili&eacute;s"
+
+#: templates/admin-banners.phtml:39
+msgid ""
+"This means you can only use letters, numbers, and the characters -,_, and ."
+msgstr ""
+"Vous pouvez utiliser uniquement des lettres, nombres et les symboles -,_ et ."
+
+#: templates/admin-banners.phtml:53 templates/admin-banners.phtml:113
+msgid "Banner Name:"
+msgstr "Nom de banni&egrave;re"
+
+#: templates/admin-banners.phtml:60 templates/admin-banners.phtml:120
+msgid "Links to"
+msgstr "Liens vers"
+
+#: templates/admin-banners.phtml:68
+msgid "Banner will be shown to affiliates if this box is checked:"
+msgstr "Banniere disponible si cette case est coch&eacute;e"
+
+#: templates/admin-banners.phtml:78
+msgid "Save Changes"
+msgstr "Enregistrer"
+
+#: templates/admin-banners.phtml:80
+msgid "Delete Banner"
+msgstr "Effacer"
+
+#: templates/admin-banners.phtml:90
+msgid "To upload a new banner"
+msgstr "Charger une banni&egrave;re"
+
+#: templates/admin-banners.phtml:92
+msgid "enter the details below, and click Upload."
+msgstr "Saisir les details ci dessous et cliquer Charger."
+
+#: templates/admin-banners.phtml:94
+msgid "The file you upload must have the appropriate extension"
+msgstr "Le fichier doit avoir une extension correcte"
+
+#: templates/admin-banners.phtml:96
+msgid "so that Affiliates for All can determine the file type."
+msgstr "afin que le programme puisse en determiner le type."
+
+#: templates/admin-banners.phtml:98
+msgid "For example, a JPEG file must be filename.jpeg or filename.jpg."
+msgstr "Par exemple, un fichier JPEG doit avoir l'extension jpg ou jpeg."
+
+#: templates/admin-banners.phtml:128 templates/admin-overview.phtml:75
+msgid "Upload"
+msgstr "Charger"
+
+#: templates/admin-banners.phtml:137
+msgid "Illegal Character"
+msgstr "Caract&eagrave;re interdit"
+
+#: templates/admin-banners.phtml:137
+msgid ""
+"Banner names are used in links, so can only contain letters, numbers, and "
+"the characters -, _, and ."
+msgstr ""
+"Les noms sont utilis&eacute;s dans les liens ; utilisez les lettres,nombres "
+"ainsi que les caracteres -,_ et ."
+
+#: templates/admin-banners.phtml:138
+msgid "Duplicate Banner Name"
+msgstr "Nom de banni&egrave;re en doublon"
+
+#: templates/admin-banners.phtml:138
+msgid ""
+"Banner names must be unique, and you already have a banner with that name."
+msgstr "Le nom doit etre unique. Une banniere du meme nom existe"
+
+#: templates/admin-banners.phtml:139
+msgid "Banner Updated"
+msgstr "Banni&egrave;re modifi&eacute;e"
+
+#: templates/admin-banners.phtml:139
+msgid "Your changes have been saved."
+msgstr "Changements enregistr&eacute;s"
+
+#: templates/admin-banners.phtml:140
+msgid "Upload Completed"
+msgstr "Chargement termin&eacute;"
+
+#: templates/admin-banners.phtml:140
+msgid "Your new banner has been uploaded successfully."
+msgstr "Votre banni&eacute;re est charg&eacute;e avec succes"
+
+#: templates/admin-banners.phtml:136
+msgid "Are you sure you want to delete this banner?"
+msgstr "Etes vous certain de vouloir effacer cette banni&egrave;re"
+
+#: templates/admin-orders.phtml:27
+msgid "Order Details"
+msgstr "D&eacute;tails Commandes"
+
+#: templates/admin-orders.phtml:33
+msgid "View orders from:"
+msgstr "Commandes depuis:"
+
+#: templates/admin-payments.phtml:33
+msgid "View payments from:"
+msgstr "Paiements depuis:"
+
+#: templates/daterange.phtml:42 templates/admin-orders.phtml:37
+msgid "to:"
+msgstr "jusqu'au:"
+
+#: templates/admin-payments.phtml:47 templates/admin-orders.phtml:47
+msgid "Add new"
+msgstr "Ajouter nouvelle"
+
+#: templates/admin-orders.phtml:47
+msgid "order"
+msgstr "commande"
+
+#: templates/admin-payments.phtml:72 templates/admin-affiliates.phtml:53
+#: templates/admin-orders.phtml:72
+msgid "Save"
+msgstr "Enregister"
+
+#: templates/admin-payments.phtml:73 templates/admin-affiliates.phtml:54
+#: templates/admin-orders.phtml:73
+msgid "Cancel"
+msgstr "Annuler"
+
+# graph.php 
+#: public/graph.php:31
+msgid "seven"
+msgstr "7"
+
+#: public/graph.php:35
+msgid "thirty"
+msgstr "30"
+
+#: public/graph.php:39
+msgid "ninety"
+msgstr "90"
+
+#: public/graph.php:119
+msgid "last"
+msgstr "derniers"
+
+#: public/graph.php:120
+msgid "days"
+msgstr "jours"
+
+# unused
+msgid "Commission"
+msgstr "Commissions"
+
+# unused
+msgid "Orders"
+msgstr "Commandes"
+
+# misc
+#: templates/admin-overview.phtml:70
+msgid "Payments file:"
+msgstr "Fichier Paiements:"
+
+#: templates/admin-overview.phtml:26
+msgid "Download Payments File"
+msgstr "Charger Fichier Paiements"
+
+#: templates/admin-overview.phtml:28
+msgid "Upload Completed Payments"
+msgstr "Int&eacute;grer Paiements Effectu&eacute;s"
+
+#: templates/admin-overview.phtml:55
+msgid "Download payments up to and including:"
+msgstr "Charger paiements juqu'au (inclus):"
+
+#: templates/admin-payments.phtml:27
+msgid "Payment Details"
+msgstr "D&eacute;tails Paiement"
+
+#: templates/admin-payments.phtml:47
+msgid "payment"
+msgstr "paiement"
+
+#: templates/admin-payments.phtml:79
+msgid "Fields marked &lsquo; * &rsquo; are required."
+msgstr "Champs marqu&eacute;s &lsquo; * &rsquo; sont requis."
+
+#: templates/admin-payments.phtml:81
+msgid ""
+"If you add a new payment, it will be given a payment number automatically "
+"when you click Save."
+msgstr ""
+"Si vous ajoutez un nouvel paiement, un identifiant lui sera assigné "
+"automatiquement en cliquant Enregistrer."
+
+#: templates/admin-payments.phtml:89
+msgid "Please complete all required fields marked *."
+msgstr "Merci de remplir tous les champs marqu&eacute;s *."
+
+#: templates/menu.phtml:43
+msgid "Admin"
+msgstr "Admin"
+
+#: templates/banners.phtml:27
+msgid "Link Details"
+msgstr "D&eacute;tails Lien"
+
+#: templates/banners.phtml:28
+msgid "Choose Banner"
+msgstr "Choisissez Banni&egrave;re"
+
+#: templates/banners.phtml:42
+msgid "Chosen banner:"
+msgstr "Bannière choisie"
+
+#: templates/banners.phtml:45
+msgid "Change"
+msgstr "Changer"
+
+#: templates/banners.phtml:49
+msgid "Campaign ID:"
+msgstr "ID Campagne"
+
+#: templates/banners.phtml:56
+msgid "Link Target:"
+msgstr "Cible de lien"
+
+#: templates/banners.phtml:65
+msgid "To display your banner, copy this code to your website:"
+msgstr "Pour montrer votre bannière, copiez ce code à votre site Web:"
+
+#: templates/banners.phtml:76
+msgid "This page shows all the available banners."
+msgstr "Cette page montre toutes les bannières disponibles."
+
+#: templates/banners.phtml:77
+msgid "Please click the one you would like to use."
+msgstr "Veuillez cliquer sur celui que vous voudriez employer."
+
+#: templates/banners.phtml:78
+msgid "You will then be taken back to the Link Details screen"
+msgstr "Vous serez alors retourné à la page de détails de lien"
+
+#: templates/banners.phtml:79
+msgid "where you can finish creating your affiliate link."
+msgstr "où vous pouvez finir créer votre lien Affili&eacute;."
+
+#: templates/account.phtml:28
+msgid "General"
+msgstr "Général"
+
+#: templates/account.phtml:29
+msgid "PayPal"
+msgstr "PayPal"
+
+#: templates/account.phtml:58
+msgid "Thank you for your agreement."
+msgstr "Merci de votre accord."

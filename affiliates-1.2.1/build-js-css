@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# Copyright (c) 2008 Metathinking Ltd.
+#
+# This file is part of Affiliates For All.
+#
+# Affiliates For All is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# Affiliates For All is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Affiliates For All.  If not, see
+# <http://www.gnu.org/licenses/>.
+
+if [ ! -f yuicompressor-*/build/yuicompressor-*.jar ]; then
+    cat <<EOF
+To rebuild the Javascript and CSS files, you need the YUI Compressor, which is
+available from http://www.julienlecomte.net/yuicompressor/ .  When you have
+downloaded it, you should unzip it in the main Affiliates For All directory.
+
+Note that rebuilding the Javascript and CSS is unnecessary unless you want to
+use additional jQuery widgets.  You will not need to do this for normal use or
+development of Affiliates For All.
+EOF
+    exit
+fi
+
+if [ ! -f jquery.ui-*/jquery-* ]; then
+    cat <<EOF
+To rebuild the Javascript and CSS files, you need jQuery UI, which is available
+from http://ui.jquery.com/ .  Download the development bundle, rather than
+using the download builder.  When you have downloaded it, you should unzip it
+in the main Affiliates For All directory.
+
+Note that rebuilding the Javascript and CSS is unnecessary unless you want to
+use additional jQuery widgets.  You will not need to do this for normal use or
+development of Affiliates For All.
+EOF
+    exit
+fi
+
+JSFILES=`echo jquery.ui-*/{jquery-*,ui/{\
+ui.core.js,ui.draggable.js,ui.resizable.js,ui.dialog.js,ui.tabs.js,\
+ui.datepicker.js}}`
+
+CSSFILES=`echo jquery.ui-*/themes/flora/{\
+flora.css,flora.dialog.css,flora.resizable.css,flora.tabs.css,\
+flora.datepicker.css}`
+
+echo 'Javascript files:'
+for i in $JSFILES; do echo $i; done
+echo
+
+echo 'CSS files:'
+for i in $CSSFILES; do echo $i; done
+
+function yui {
+	java -jar yuicompressor-*/build/yuicompressor-*.jar \
+		-o tmp $1
+
+	if [ -e public/$1 ] && cmp tmp public/$1 >& /dev/null; then
+		echo "$1 has not changed."
+		rm tmp
+	else 
+		echo "$1 has changed, replacing."
+		mv tmp public/$1
+	fi
+}
+
+cat $JSFILES > jslib.js
+yui jslib.js
+rm jslib.js
+
+cat $CSSFILES > csslib.css
+yui csslib.css
+rm csslib.css

@@ -1,0 +1,3 @@
+#: account.phtml:140
+msgid "Your Postcode:"
+msgstr "Your Zip Code:"
