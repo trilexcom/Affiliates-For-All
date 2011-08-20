@@ -1,0 +1,190 @@
+                                    Credits
+                                    -------
+
+
+Affiliates For All contains code and images from certain other open source
+projects.  This file gives credit to these other open source projects and also
+includes any legal notices which are required by their licence terms.
+
+The Affiliates For All licence terms can be found in the file called COPYING.
+The terms in COPYING apply to the whole of Affiliates For All, except for some
+of the files which came originally from other projects; see below.
+
+I would like to thank the authors of the packages whose code is included in
+Affiliates For All.  Affiliates For All would have been a much poorer product
+if you had not been generous enough to make your work open source.
+
+
+Affiliates For All is subject to the following licence conditions.
+
+
+    Copyright (c) 2008 Metathinking Ltd.
+
+    Affiliates For All is free software: you can redistribute it and/or
+    modify it under the terms of the GNU General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    Affiliates For All is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Affiliates For All.  If not, see
+    <http://www.gnu.org/licenses/>.
+
+
+http://jquery.com/
+
+Affiliates For All includes code from the jQuery package.  JQuery contained the
+following copyright notices:
+
+
+    jQuery 1.2.6 - New Wave Javascript
+
+    Copyright (c) 2008 John Resig (jquery.com)
+    Dual licensed under the MIT (MIT-LICENSE.txt)
+    and GPL (GPL-LICENSE.txt) licenses.
+
+
+and
+
+
+    jQuery UI 1.5.2
+
+    Copyright (c) 2008 Paul Bakaus (ui.jquery.com)
+    Dual licensed under the MIT (MIT-LICENSE.txt)
+    and GPL (GPL-LICENSE.txt) licenses.
+
+    http://docs.jquery.com/UI
+
+
+JQuery uses GPLv2.  Accordingly, Metathinking Ltd elected to license jQuery
+under the MIT licence.  Because this licence is compatible with the GPLv3, we
+are able to include jQuery files in Affiliates For All.  The MIT licence
+requires that we include the following notice:
+
+
+    Copyright (c) 2007 John Resig, http://jquery.com/
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+http://www.makko.com.mx/gdgraph/
+
+Affiliates For All includes a modified copy of the GDGraph package.  This
+package contained the following copyright notice:
+
+
+    Copyright (C) 2006  Makko Solutions
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+    02110-1301, USA.
+
+
+Although this copyright notice refers to GPLv2, it permits licensing under a
+later version.  Metathinking Ltd chooses to license this code to you under the
+GPLv3.
+
+In accordance with the GPL, Metathinking Ltd notes that it modified GDGraph
+on 12th August 2008.
+
+
+http://hplip.sourceforge.net/
+
+Affiliates For All includes images taken from the hplip package.  This package
+contained the following copyright notice:
+
+
+    (c) Copyright 2001-2008 Hewlett-Packard Development Company, L.P.
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+
+Although this copyright notice refers to GPLv2, it permits licensing under a
+later version.  Metathinking Ltd chooses to license these images to you under
+the GPLv3.
+
+
+http://phpxmlrpc.sourceforge.net/
+
+Affiliates for All contains files from XML-RPC for PHP.  This package contained
+the following copyright notice:
+
+
+    Copyright © 1999,2000,2001 Edd Dumbill, Useful Information Company
+
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+	* Redistributions of source code must retain the above copyright
+	  notice, this list of conditions and the following disclaimer.
+
+	* Redistributions in binary form must reproduce the above copyright
+	  notice, this list of conditions and the following disclaimer in the
+	  documentation and/or other materials provided with the distribution.
+
+	* Neither the name of the "XML-RPC for PHP" nor the names of its
+	  contributors may be used to endorse or promote products derived from
+	  this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+    ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+    OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+    DAMAGE.
+
+
+Because this licence is compatible with the GPLv3, we are able to include
+XML-RPC for PHP files in Affiliates For All. 
+
