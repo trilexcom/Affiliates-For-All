@@ -1,0 +1,48 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="menu">
+  <?php if($this->admin) { ?>
+    <a href="admin-overview.php"><?php echo __('Site Overview') ?></a> |
+    <a href="admin-affiliates.php"><?php echo __('Affiliates') ?></a> |
+    <a href="admin-banners.php"><?php echo __('Banners') ?></a> |
+    <a href="admin-orders.php"><?php echo __('All Orders') ?></a> |
+    <a href="admin-payments.php"><?php echo __('All Payments') ?></a> |
+    <a href="overview.php"><?php echo __('Back') ?></a> |
+  <?php } else { ?>
+    <a href="overview.php"><?php echo __('Overview') ?></a> |
+    <a href="account.php"><?php echo __('Your Account') ?></a> |
+
+    <?php if($this->offer_banners) { ?>
+      <a href="banners.php"><?php echo __('Banners') ?></a> |
+    <?php } ?>
+    
+    <a href="orders.php"><?php echo __('Your Orders') ?></a> |
+    <a href="payments.php"><?php echo __('Your Payments') ?></a> |
+
+    <?php if($_SESSION['administrator']) { ?>
+      <a href="admin-overview.php"><?php echo __('Admin') ?></a> |
+    <?php } ?>
+  <?php } ?>
+
+  <a href="logout.php"><?php echo __('Log Out') ?></a>
+</div>
