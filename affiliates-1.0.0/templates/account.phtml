@@ -1,0 +1,217 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="tabs" class="medium">
+  <ul>
+    <li><a href="#legal"><span>Terms of Business</span></a></li>
+    <li><a href="#general"><span>General</span></a></li>
+    <li><a href="#paypal"><span>PayPal</span></a></li>
+    <li><a href="#password"><span>Password</span></a></li>
+  </ul>
+  <div id="legal">
+    <?php if($v->wizard) { ?>
+      <p>Thank you for signing up.  Below, you will find the terms and conditions for our affiliate programme.  Please read through them, and indicate your agreement by clicking the button at the bottom.  Once you have done that, we will need to get some contact details, and then your account will be fully active.</p>
+    <?php } else { ?>
+      <p>For your reference, here are the terms and conditions for our affiliate programme:</p>
+    <?php } ?>
+
+    <table class="form">
+      <tr>
+        <td><?php echo $v->terms ?></td>
+      </tr>
+      <tr>
+        <td class="submit">
+          <?php if($v->wizard) { ?>
+            <form>
+              <input id="agree" type="submit" value="I Agree"/>
+            </form>
+          <?php } else { ?>
+            Thank you for your agreement.
+          <?php } ?>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="general">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td>Affiliate ID:</td>
+          <td><?php echo $v->user_id ?></td>
+        </tr>
+        <tr>
+          <td>Username:</td>
+          <td><?php echo $v->user_local_username ?></td>
+        </tr>
+        <tr>
+          <td>Your Name:</td>
+          <td>
+            <table>
+              <tr>
+                <td>Title:</td>
+                <td class="spacer">First Name:</td>
+                <td>Last Name:</td>
+              </tr>
+              <tr>
+                <td>
+                  <input id="title" name="title" type="text" size="4"
+                    value="<?php echo htmlspecialchars($v->user_title) ?>"> *
+                </td>
+                <td class="spacer">
+                  <input id="firstname" name="first_name" type="text" size="10"
+                    value="<?php echo htmlspecialchars($v->user_first_name) ?>">
+                  *
+                </td>
+                <td>
+                  <input id="lastname" name="last_name" type="text" size="10"
+                    value="<?php echo htmlspecialchars($v->user_last_name) ?>">
+                  *
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Your Email Address:</td>
+          <td>
+            <input id="email" name="email" type="text"
+              value="<?php echo htmlspecialchars($v->user_email) ?>"> *
+            <br/>
+            <input id="email_update" name="email_update" type="checkbox"
+              <?php echo $v->user_email_update ? 'checked="checked"' : '' ?>/>
+            Check this box to receive order updates by email.
+          </td>
+        </tr>
+        <tr>
+          <td>Your Address:</td>
+          <td>
+            <input id="address1" name="address1" type="text"
+              value="<?php echo htmlspecialchars($v->user_address1) ?>"> *
+            <br/>
+            <input id="address2" name="address2" type="text"
+              value="<?php echo htmlspecialchars($v->user_address2) ?>"> *
+            <br/>
+            <input id="address3" name="address3" type="text"
+              value="<?php echo htmlspecialchars($v->user_address3) ?>">
+            <br/>
+            <input id="address4" name="address4" type="text"
+              value="<?php echo htmlspecialchars($v->user_address4) ?>">
+            <br/>
+          </td>
+        </tr>
+        <tr>
+          <td>Your Post/Zip Code:</td>
+          <td>
+            <input id="postcode" name="postcode" type="text"
+              value="<?php echo htmlspecialchars($v->user_postcode) ?>"> *
+          </td>
+        </tr>
+        <tr>
+          <td>Your Country:</td>
+          <td>
+            <select id="country" name="country">
+              <?php foreach($v->countries as $country) { ?>
+                <option value="<?php echo $country['id'] ?>"
+                    <?php if($v->user_country == $country['id'])
+                        echo('selected="selected"') ?> >
+
+                  <?php echo $country['name'] ?>
+                </option>
+              <?php } ?>
+            </select> *
+          </td>
+        </tr>
+        <tr>
+          <td>Your Phone Number:</td>
+          <td>
+            <input id="phone" name="phone" type="text"
+              value="<?php echo htmlspecialchars($v->user_phone) ?>"> *
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit">
+            <input type="submit" value="Save Details"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p>Fields marked ‘ * ’ are required.</p>
+  </div>
+  <div id="password">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td>New Password:</td>
+          <td><input id="chosenpassword" type="password" name="password"/></td>
+        </tr>
+        <tr>
+          <td class="mergedown">Confirm New Password:</td>
+          <td class="mergedown">
+            <input id="confirmpassword" type="password" name="confirmpassword"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="mergeup">&nbsp;</td>
+          <td id="passmessage" class="mergeup">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit">
+            <input type="submit" value="Change Password"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="paypal">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td>PayPal ID:</td>
+          <td>
+            <input id="paypalid" type="text"
+                value="<?php echo htmlspecialchars($v->user_paypal) ?>">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit">
+            <input type="submit" value="Set PayPal ID"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p>Your PayPal ID will be an email address.  Enter the whole of that email address in the box above, for example ‘paypal@example.com’.  If you don’t put anything in the box, you will not be paid, but your earnings will be carried forward until you claim them.</p>
+  </div>
+</div>
+
+<div id="failedtosetpwd" class="dialogue" title="Couldn’t Change Password">Please choose a new password and enter it in both the boxes.</div>
+
+<div id="generalset" class="dialogue" title="Settings Updated">Your details have been set.</div>
+
+<div id="requiredfields" class="dialogue" title="Required Fields Empty">Please complete all required fields (those marked ‘ * ’).</div>
+
+<div id="pwdset" class="dialogue" title="Password Changed">Your password has been changed.</div>
+
+<div id="paypalset" class="dialogue" title="Details Updated">Your PayPal ID has been set.</div>
+
+<div id="endofwizard" class="dialogue" title="Account Activated">Thank you for providing these details.  Your account is now active.</div>

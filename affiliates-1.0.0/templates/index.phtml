@@ -1,0 +1,90 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+<div id="tabs" class="narrow">
+  <ul>
+    <li><a href="#logon"><span>Log On</span></a></li>
+    <li><a href="#signup"><span>Sign Up</span></a></li>
+  </ul>
+  <div id="logon">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td>Username:</td>
+          <td><input id="username" type="text" name="username"/></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input id="password" type="password" name="password"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit">
+            <input type="submit" value="Log On"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="signup">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td class="mergedown">Choose a username:</td>
+          <td class="mergedown">
+            <input id="chosenusername" type="text" name="username"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="mergeup">&nbsp;</td>
+          <td id="message" class="mergeup">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>Choose a password:</td>
+          <td>
+            <input id="chosenpassword" type="password" name="password"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="mergedown">Confirm password:</td>
+          <td class="mergedown">
+            <input id="confirmpassword" type="password" name="confirmpassword"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="mergeup">&nbsp;</td>
+          <td id="passmessage" class="mergeup">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2" class="submit">
+            <input type="submit" value="Sign Up"/>
+          </td>
+        </tr>
+      </table>
+      <p>Your username is used for logging on, but it isn’t used in your affiliate links.  This means you can keep your username private, if you want to.</p>
+    </form>
+  </div>
+</div>
+
+<div id="failedtosignup" class="dialogue" title="Form Incomplete">Before clicking ‘Sign Up’ you will need to choose a username that has not been taken already, and then enter the same password in the two other boxes.</div>
+
+<div id="failedtologon" class="dialogue" title="Logon Failed">The username and password you entered were not recognised.</div>
