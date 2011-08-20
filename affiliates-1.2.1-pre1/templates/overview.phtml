@@ -1,0 +1,67 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="tabs" class="wide">
+  <ul>
+    <li><a href="#summary"><span><?php echo __('Summary') ?></span></a></li>
+    <li><a href="#commission"><span><?php echo __('Commission Graphs') ?></span></a></li>
+    <li><a href="#orders"><span><?php echo __('Order Graphs') ?></span></a></li>
+  </ul>
+  <div id="summary">
+    <table class="form">
+      <tr>
+        <td><?php echo __('Total Orders:') ?></td>
+        <td><?php echo $v->currency.$v->total_orders ?></td>
+      </tr>
+      <tr>
+        <td><?php echo __('Total Commission:') ?></td>
+        <td><?php echo $v->currency.$v->total_commission ?></td>
+      </tr>
+      <tr>
+        <td><?php echo __('Commission Paid:') ?></td>
+        <td><?php echo $v->currency.$v->total_payments ?></td>
+      </tr>
+      <tr>
+        <td><?php echo __('Commission Payable:') ?></td>
+        <td><?php echo $v->currency.$v->total_payable ?></td>
+      </tr>
+      <tr>
+        <td><?php echo __('Your Affiliate Link:') ?></td>
+        <td><a href="<?php echo $v->link ?>"><?php echo $v->link ?></a></td>
+      </tr>
+      <tr>
+        <td><?php echo __('Affiliate Link with Campaign ID:') ?></td>
+        <td><a href="<?php echo $v->link2 ?>"><?php echo $v->link2 ?></a></td>
+      </tr>
+    </table>
+  </div>
+  <div id="commission" class="graphs">
+    <img id="com7" class="graph" src="loading.png"/>
+    <img id="com30" class="graph" src="loading.png"/>
+    <img id="com90" class="graph" src="loading.png"/>
+  </div>
+  <div id="orders" class="graphs">
+    <img id="ord7" class="graph" src="loading.png"/>
+    <img id="ord30" class="graph" src="loading.png"/>
+    <img id="ord90" class="graph" src="loading.png"/>
+  </div>
+</div>
