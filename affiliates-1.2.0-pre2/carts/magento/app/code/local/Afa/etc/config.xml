@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<!--
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+-->
+
+<config>
+  <global>
+    <models>
+      <afacatalog>
+        <class>Afa</class>
+      </afacatalog>
+    </models>
+    <events>
+      <controller_front_init_before>
+        <observers>
+          <afa_init_observer>
+            <type>singleton</type>
+            <class>afacatalog/observer</class>
+            <method>set_affiliate_cookie</method>
+          </afa_init_observer>
+        </observers>
+      </controller_front_init_before>
+      <sales_order_place_after>
+        <observers>
+          <afa_init_observer>
+            <type>singleton</type>
+            <class>afacatalog/observer</class>
+            <method>order_placed</method>
+          </afa_init_observer>
+        </observers>
+      </sales_order_place_after>
+      <sales_order_save_after>
+        <observers>
+          <afa_init_observer>
+            <type>singleton</type>
+            <class>afacatalog/observer</class>
+            <method>model_saved</method>
+          </afa_init_observer>
+        </observers>
+      </sales_order_save_after>
+    </events>
+    <helpers>
+      <afa>
+        <class>Afa_Helper</class>
+      </afa>
+    </helpers>
+  </global>
+  <adminhtml>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <afa>
+                      <title>Affiliates For All Section</title>
+                    </afa>
+                  </children>
+                </config>
+              </children>
+            </system>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
+  <default>
+    <afa>
+      <afa>
+        <url>http://www.example.com/affiliates</url>
+        <secret>changeme</secret>
+      </afa>
+    </afa>
+  </default>
+</config>

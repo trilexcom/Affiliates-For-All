@@ -1,0 +1,92 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="tabs" class="vwide">
+  <ul>
+    <li><a href="#query"><span><?php echo __('Date Range') ?></span></a></li>
+    <li><a href="#results"><span><?php echo __('Results') ?></span></a></li>
+    <li><a href="#details"><span><?php echo __('Order Details') ?></span></a></li>
+  </ul>
+  <div id="query">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td><?php echo __('View orders from:') ?></td>
+          <td><input id="from" type="text" size="12"/></td>
+        </tr>
+        <tr>
+          <td><?php echo __('to:') ?></td>
+          <td><input id="to" type="text" size="12"/></td>
+        </tr>
+        <tr>
+          <td class="submit" colspan="2">
+            <input id="display" type="submit" value="<?php echo __('Display') ?>"/>
+            <input id="download" type="submit" value="<?php echo __('Download') ?>"/>
+          </td>
+        </tr>
+      </table>
+      <div id="addnew"><a href="#"><?php echo __('Add new') ?></a> <?php echo __('order') ?>.</div>
+    </form>
+  </div>
+  <div id="results">
+    <table id="restable" class="form">
+    </table>
+    <div id="navigation">
+      <?php echo __('Page') ?> <span id="currentpage">?</span> <?php echo __('of') ?> <span id="maxpages">?</span>.  <?php echo __('Go to:') ?>
+      <a id="previous" href="#"><?php echo __('Previous Page') ?></a>,
+      <a id="next" href="#"><?php echo __('Next Page') ?></a>,
+      <?php echo __('Page') ?> <span id="pagelist">?</span>.
+    </div>
+  </div>
+  <div id="details">
+    <table id="detailstable" class="form">
+      <?php foreach($v->fields->get_field_descriptions() as $details) { ?>
+        <tr>
+          <td><?php echo $details[1] ?></td>
+          <td>
+            <?php $this->make_data_field($details) ?>
+          </td>
+        </tr>
+      <?php } ?>
+      <tr>
+        <td class="submit" colspan="2">
+          <input id="details_save" type="submit" value="<?php echo __('Save') ?>"/>
+          <input id="details_cancel" type="submit" value="<?php echo __('Cancel') ?>"/>
+        </td>
+      </tr>
+    </table>
+    <p>
+		<?php 
+			echo __('Fields marked') ;
+			echo ' * '; 
+			echo __('are required.');
+		?>
+	</p>
+  </div>
+</div>
+
+<div id="offstart" class="dialogue" title="<?php echo __('No More Data') ?>"><?php echo __('You are already on the first page.') ?></div>
+<div id="offend" class="dialogue" title="<?php echo __('No More Data') ?>"><?php echo __('You are already on the last page.') ?></div>
+<div id="requiredfields" class="dialogue" title="<?php echo __('Required Fields Empty') ?>"><?php echo __('Please complete all required fields marked') ?> * </div>
+<div id="dberror" class="dialogue" title="<?php echo __('Invalid Data') ?>">?</div>
+<div id="saved" class="dialogue" title="<?php echo __('Changes Saved') ?>"><?php echo __('The information you entered has been saved.') ?></div>
+<div id="confirmdelete" class="dialogue" title="<?php echo __('Are you sure?') ?>"><?php echo __('Are you sure you want to delete this record?') ?></div>
