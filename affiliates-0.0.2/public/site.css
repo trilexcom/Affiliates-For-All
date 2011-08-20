@@ -1,0 +1,114 @@
+body {
+    margin: 1em;
+
+    font-family: Deja Vu Sans, Bitstream Vera Sans, Verdana, sans-serif
+        !important;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#tabs {
+    margin: 5em auto;
+}
+
+.narrow {
+    width: 30em;
+}
+
+.medium {
+    width: 40em;
+}
+
+.wide {
+    width: 800px;
+}
+
+#menu {
+    margin-bottom: 1em;
+}
+
+#heading {
+    border-top: 1px solid #80c080;
+    border-bottom: 1px solid #80c080;
+    background-color: #f0fff0;
+    text-align: center;
+}
+
+.form {
+    margin: 1em auto;
+    background-color: #f0fff0;
+    border-collapse: collapse;
+}
+
+.form td {
+    border: 1px solid #80c080;
+    padding: 5px 10px;
+    vertical-align: baseline;
+}
+
+.form .submit {
+    text-align: center;
+}
+
+.form .mergeup {
+    border-top: 0px;
+}
+
+.form .mergedown {
+    border-bottom: 0px;
+}
+
+.form table {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+.form table td {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.form table .spacer {
+    padding: 5px;
+}
+
+.graphs {
+    padding: 5em 0px;
+    text-align: center;
+}
+
+.yes {
+    color: #408040;
+}
+
+.no {
+    color: #ff4040;
+}
+
+.dialogue {
+    font-size: small;
+    display: none;
+}
