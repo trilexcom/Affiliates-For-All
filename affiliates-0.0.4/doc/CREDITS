@@ -1,0 +1,164 @@
+                                    Credits
+                                    -------
+
+
+Affiliates For All contains code and images from certain other open source
+projects.  This file gives credit to these other open source projects and also
+includes any legal notices which are required by their licence terms.
+
+The Affiliates For All licence terms can be found in the file called COPYING.
+These terms apply to the whole of Affiliates For All, including the files which
+came originally from other projects.  This is to keep the legal issues as
+simple as possible.  If you want these files under their original licence
+terms, you should download the files from their original source.  For example,
+if you download jQuery from jquery.com, you will be able to license it under
+more permissive terms.
+
+Nothing in this file modifies the licence terms contained in the file called
+COPYING.  That file contains the entire legal licence agreement for Affiliates
+For All.
+
+Before starting on the legal notices, I would like to thank the authors of the
+packages whose code is included in Affiliates For All.  Affiliates For All
+would have been a much poorer product if you had not been generous enough to
+make your work open source.
+
+Here are the legal notices which we must give you.  While the text that follows
+may seem rather legalistic, it isn't meant to be unfriendly!  It is here
+because, when someone is generous enough to give away software under permissive
+terms, they deserve to have those terms respected.  Some of these authors have
+asked that people using their code should include a particular legal notice,
+and I believe I should respect this.
+
+
+Affiliates For All is subject to the following licence conditions.
+
+
+    Copyright (c) 2008 Metathinking Ltd.
+
+    Affiliates For All is free software: you can redistribute it and/or
+    modify it under the terms of the GNU General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    Affiliates For All is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Affiliates For All.  If not, see
+    <http://www.gnu.org/licenses/>.
+
+
+http://jquery.com/
+
+Affiliates For All includes code from the jQuery package.  JQuery contained the
+following copyright notices:
+
+
+    jQuery 1.2.6 - New Wave Javascript
+
+    Copyright (c) 2008 John Resig (jquery.com)
+    Dual licensed under the MIT (MIT-LICENSE.txt)
+    and GPL (GPL-LICENSE.txt) licenses.
+
+
+and
+
+
+    jQuery UI 1.5.2
+
+    Copyright (c) 2008 Paul Bakaus (ui.jquery.com)
+    Dual licensed under the MIT (MIT-LICENSE.txt)
+    and GPL (GPL-LICENSE.txt) licenses.
+
+    http://docs.jquery.com/UI
+
+
+JQuery uses GPLv2.  Accordingly, Metathinking Ltd elected to license jQuery
+under the MIT licence.  Because this licence is compatible with the GPLv3, we
+are able to include jQuery files in Affiliates For All.  The MIT licence
+requires that we include the following notice:
+
+
+    Copyright (c) 2007 John Resig, http://jquery.com/
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+http://www.makko.com.mx/gdgraph/
+
+Affiliates For All includes a modified copy of the GDGraph package.  This
+package contained the following copyright notice:
+
+
+    Copyright (C) 2006  Makko Solutions
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+    02110-1301, USA.
+
+
+Although this copyright notice refers to GPLv2, it permits licensing under a
+later version.  Metathinking Ltd chooses to license this code to you under the
+GPLv3.
+
+In accordance with the GPL, Metathinking Ltd notes that it modified GDGraph
+on 12th August 2008.
+
+
+http://hplip.sourceforge.net/
+
+Affiliates For All includes images taken from the hplip package.  This package
+contained the following copyright notice:
+
+
+    (c) Copyright 2001-2008 Hewlett-Packard Development Company, L.P.
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+
+Although this copyright notice refers to GPLv2, it permits licensing under a
+later version.  Metathinking Ltd chooses to license these images to you under
+the GPLv3.

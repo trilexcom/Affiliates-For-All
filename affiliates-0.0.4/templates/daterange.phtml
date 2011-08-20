@@ -1,0 +1,67 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/
+
+function daterange_tabdefs() { ?>
+<li><a href="#query"><span>Date Range</span></a></li>
+<li><a href="#results"><span>Results</span></a></li>
+<?php }
+
+function daterange_tabs($name, $download_required) { ?>
+<div id="query">
+  <form method="post">
+    <table class="form">
+      <tr>
+        <td>View <?php echo $name ?> from:</td>
+        <td><input id="from" type="text" size="12"/></td>
+      </tr>
+      <tr>
+        <td>to:</td>
+        <td><input id="to" type="text" size="12"/></td>
+      </tr>
+      <tr>
+        <td class="submit" colspan="2">
+          <input id="display" type="submit" value="Display"/>
+          <?php if($download_required) { ?>
+            <input id="download" type="submit" value="Download"/>
+          <?php } ?>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div id="results">
+  <table id="restable" class="form">
+  </table>
+  <div id="navigation">
+    Page <span id="currentpage">?</span> of <span id="maxpages">?</span>.  Go to:
+    <a id="previous" href="#">Previous Page</a>,
+    <a id="next" href="#">Next Page</a>,
+    Page <span id="pagelist">?</span>.
+  </div>
+</div>
+<?php }
+
+function daterange_dialogues() { ?>
+<div id="offstart" class="dialogue" title="No More Data">You are already on the first page.</div>
+
+<div id="offend" class="dialogue" title="No More Data">You are already on the last page.</div>
+<?php }
