@@ -1,0 +1,39 @@
+<?php
+
+$affiliate_get_parameter = 'ref';
+$affiliate_cookie = 'affiliate';
+$cookie_lifetime = 30 /* days */;
+$currency = '$';
+$store_home = 'http://www.example.com/store';
+$commission_percent = 10;
+$commission_fixed = '1.00';
+
+// Affiliates can be given full or restricted information about the referred
+// customers and their orders.  The fields you want to reveal should be placed
+// in this list:
+
+$order_fields_available =
+    'id, status, customer_name, customer_email, total, commission,' .
+    'date_entered';
+$order_fields_headings =
+    'Order Number, Status, Customer Name, Customer Email, Total, Commission,' .
+    'Order Date';
+
+// The following secret is used to secure communications between the shopping
+// cart and the affiliate system.  Just choose something that will be hard to
+// guess.
+
+$rpc_secret = 'changeme';
+
+// Fill in the settings for your database below.  Note that all testing has
+// been carried out on MySQL 5.0.
+
+$database_dsn = 'mysql:dbname=affiliates;host=127.0.0.1';
+$database_username = 'affiliates';
+$database_password = '';
+
+// Affiliates will be asked to agree to the following terms of business:
+
+$terms_of_business = <<<end
+<p>Terms of business go here, with HTML markup.</p>
+end;
