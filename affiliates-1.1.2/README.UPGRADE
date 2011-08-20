@@ -1,0 +1,55 @@
+How to Upgrade Affiliates for All
+=================================
+
+Affiliates for All 1.1.x incorporates some important bug fixes compared to
+older versions.  Because of this, an upgrade is highly recommended.  Having
+said that, none of the fixes involved security, so remaining on 1.0.0 doesn't
+expose you to any additional risk.
+
+The 1.1.x series also includes a mechanism for serving banners.  Your banners
+can be uploaded into Affiliates for All, and they will be made available to
+your affiliates.  Your affiliates will be able to download HTML code which
+includes their affiliate link, and their chosen banner.  All they will have to
+do is copy this code to their own website, and the banner will be displayed.
+(I would like to thank BeeYouTiful.com for sponsoring development of this
+feature.)
+
+Before you attempt to upgrade an important system, please make sure you have a
+backup.  Even if you make regular backups, check they are up to date, and that
+you could recover from them if you had to.
+
+Upgrading from Specific Versions:
+---------------------------------
+
+If you are upgrading from Affiliates for All 1.1.0 or later, you can simply
+extract the new installation on top of the old one.  Your old 'config.inc' file
+will be preserved, so your installation will carry on working the same way.
+There have been no changes to the database since 1.1.0, so no separate database
+upgrade is required.
+
+If you are upgrading from Affiliates for All 1.0.x, you should extract the new
+installation on top of the old one, as described above.  You will also need to
+run the database script 'affiliates-v1.0-v1.1.sql'.  (If you are unsure how to
+do this, try to use the same tool that you used to run 'affiliates.sql' during
+your initial installation.)
+
+Upgrades from the pre-release versions of Affiliates for All are not supported.
+If anyone is still running one of these, and you need your data, please post on
+the forum and I will see what can be done.
+
+Notes
+-----
+
+The recommended way of integrating Magento with Affiliates for All is to create
+links from the Magento directory to the AfA directory.  If you copied the files
+rather than linking them, you will need to copy them again after upgrading.
+This is because some of these files will have changed, and your Magento
+installation could be attempting to use old versions.
+
+Problems?
+---------
+
+If you have any problems with your upgrade, please post on the forum at
+http://www.affiliatesforall.org/forums/ and I will try to help.
+
+Pete

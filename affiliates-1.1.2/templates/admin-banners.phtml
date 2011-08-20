@@ -1,0 +1,125 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/
+
+?>
+
+<span id="start" style="display: none"><?php echo $v->start ?></span>
+
+<div id="tabs" class="wide">
+  <ul>
+    <li><a href="#banners"><span>Current Banners</span></a></li>
+    <li><a href="#newbanner"><span>Add New Banner</span></a></li>
+  </ul>
+  <div id="banners">
+    <p>This tab allows configuration of the banners which have been loaded into Affiliates for All.  Note that the banner name will be used in affiliates’ links.  This means you can only use letters, numbers, and the characters ‘-’, ‘_’, and ‘.’.</p>
+
+    <form>
+      <table class="form">
+        <?php foreach($v->banners as $banner) { ?>
+          <tr>
+            <td class="largecell topsep" colspan="2">
+              <img id="banner_<?php echo $banner['id'] ?>"
+                src="servebanner.php?name=<?php echo $banner['name'] ?>"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Banner Name:</td>
+            <td>
+              <input id="name_<?php echo $banner['id'] ?>" type="text"
+                size="20" value="<?php echo $banner['name'] ?>"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Links to <?php echo $v->store_home ?></td>
+            <td>
+              <input id="linktarget_<?php echo $banner['id'] ?>" type="text"
+                size="20" value="<?php echo $banner['link_target'] ?>"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Banner will be shown to affiliates if this box is checked:
+            </td>
+            <td>
+              <input id="enabled_<?php echo $banner['id'] ?>" type="checkbox"
+                <?php echo $banner['enabled'] ? 'checked="1"' : '' ?>/>
+            </td>
+          </tr>
+          <tr>
+            <td class="submit bannersubmit bottomsep" colspan="2">
+              <input id="save_<?php echo $banner['id'] ?>" type="submit"
+                value="Save Changes"/>
+              <input id="delete_<?php echo $banner['id'] ?>" type="submit"
+                value="Delete Banner"/>
+            </td>
+          </tr>
+        <?php } ?>
+      </table>
+    </form>
+  </div>
+  <div id="newbanner">
+    <p>To upload a new banner, enter the details below, and click ‘Upload’.  The file you upload must have the appropriate extension, so that Affiliates for All can determine the file type.  For example, a JPEG file must be ‘filename.jpeg’ or ‘filename.jpg’.</p>
+  
+    <form method="post" enctype="multipart/form-data">
+      <table class="form">
+        <tr>
+          <td>Image File:</td>
+          <td>
+            <input type="file" name="file"
+              accept="image/gif,image/jpeg,image/png"
+              value="<?php echo $v->new_name ?>"/>
+            </td>
+        </tr>
+        <tr>
+          <td>Banner Name:</td>
+          <td>
+            <input id="new_name" name="new_name" type="text" size="20"
+              value="<?php echo $v->new_name ?>"/>
+          </td>
+        </tr>
+        <tr>
+          <td>Links to <?php echo $v->store_home ?></td>
+          <td>
+            <input name="new_linktarget" type="text" size="20"
+              value="<?php echo $v->new_linktarget ?>"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="submit" colspan="2">
+            <input id="upload" type="submit" value="Upload"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<div id="confirmdelete" class="dialogue" title="Are you sure?">Are you sure you want to delete this banner?</div>
+
+<div id="illegalchar" class="dialogue" title="Illegal Character">Banner names are used in links, so can only contain letters, numbers, and the characters ‘-’, ‘_’, and ‘.’.</div>
+
+<div id="duplicate" class="dialogue" title="Duplicate Banner Name">Banner names must be unique, and you already have a banner with that name.</div>
+
+<div id="banneraltered" class="dialogue" title="Banner Updated">Your changes have been saved.</div>
+
+<div id="success" class="dialogue" title="Upload Completed">Your new banner has been uploaded successfully.</div>
+ 
