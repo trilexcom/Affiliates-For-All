@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Open Source Affiliate Software</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+  <h1>Open Source Affiliate Software</h1>
+
+  <p>In this document, I have tried to bring together all the must-have requirements posted <a href="http://www.magentocommerce.com/boards/viewthread/3422/">in the MagentoCommerce thread</a>.  We are agreed that we will produce a minimal affiliate script before attempting anything more sophisticated.  To this end, I have left out features which are not essential for a working affiliate programme.</p>
+
+  <h2>Program Structure</h2>
+
+  <p>Eventually we want to support a variety of shopping carts, but initially we will just support Magento.  To help with support for other carts in the future, we will keep the Magento integration separate from the affiliate script proper.  Someone who wanted to integrate our script with another cart could then replace that one module, and they would not have to make changes in other areas of the code.</p>
+
+  <p>The Magento integration should signal the affiliate script when an order has been submitted, and again when it has been shipped.  Affiliates would expect to be notified as soon as an order has been placed.  At the same time, store owners would probably not expect to pay affiliates until they have successfully charged the customer’s credit card.</p>
+
+  <p>Some online stores make all customers affiliates.  Others have a separate sign-up screen for affiliates.  We need to support both models.  It follows that the Magento integration must provide a facility which allows the affiliate script to obtain the details of a customer.</p>
+
+  <p>An administration system is also required.  Access to the administration system is available to affiliate accounts which have been assigned administrative privileges.  Initially, there will be two privilege levels only: unprivileged, and completely privileged.  Later, a more fine-grained access control system may be developed.</p>
+
+  <h2>Reporting</h2>
+
+  <p>Affiliates expect to have reporting tools.  Initially I suggest that we provide graphs showing:</p>
+
+  <ul>
+    <li>revenue per day for the past week, month and quarter, and</li>
+    <li>orders per day for the past week, month and quarter.</li>
+  </ul>
+
+  <p>We should also provide access to individual order details.  The affiliate would enter a date range, and the system would provide a list of matching orders.  Against each order, the system would show the products ordered, the price and the customer’s details.  (It would be sensible to avoid showing financial information such as credit card numbers, though.)</p>
+
+  <h2>Links</h2>
+
+  <p>The affiliate should be able to obtain a link with his affiliate ID embedded.  To allow affiliates to track orders, there should also be a space for some free-form text.  This text will be included in the order list described above.</p>
+
+  <p>The free-form text will allow the affiliate to monitor return on investment for different kinds of advertising.  For example, when using AdWords, the affiliate could embed the keywords in the free-form text field.  This would allow the cost of particular keywords to be compared with the revenue generated.</p>
+
+  <h2>Administration System</h2>
+
+  <p>The administration system will allow for configuration of the system:</p>
+
+  <ul>
+    <li>It will be possible to set the amount of commission payable.  This could be a flat figure per order, or a percentage of the total spend.</li>
+
+    <li>Affiliates can earn a variety of different things.  They might earn loyalty points, or a currency.  We can accommodate all these by allowing the description of the earnings to be changed.  Conventional affiliate programmes might choose ‘dollars’ or ‘pounds’ while loyalty schemes might choose ‘points’.</li>
+  </ul>
+
+  <p>The administration system will also provide a report showing the earnings of each affiliate, so that payment can be made.  This report would be in a form suitable for PayPal Mass Payment (other payment processors can be supported later).</p>
+
+  <p>There will also be a facility where a similar file can be fed back in.  This step tells the affiliate software when affiliates have been paid, so that their balances can be adjusted.</p>
+
+  <p>If a site has any special payment policies, it can simply adjust the file before sending it to PayPal and feeding it back to the affiliate software.  For example, if a site carries forward balances under $50, the administrator can edit the file to remove affiliates who do not qualify for payment.  The file would then be sent to PayPal and also fed back into the affiliate software.  Because the same file is used in each case, the balances still add up to the right amount.  The people who have been paid will see a corresponding credit in their affiliate accounts.  The people who have not qualified for payment will not see a credit and their whole balance will remain until the next payment date.</p>
+
+  <h2>Name</h2>
+
+  <p>At some point we will have to choose a name for our project.  This sounds like a low priority, but actually it needs to be settled fairly soon.  We cannot register the project on any hosting site until we know what we are calling it!</p>
+
+  <p>Whatever name we choose, it would be nice if we could have the .com and the .org domains.  This means that, in the future, we could use .org for the open source project and .com for any consultancy or other commercial work.</p>
+
+  <p>Unfortunately, most obvious .com names relating to affiliate marketing have already been registered.  After spending a while searching, I came up with AffiliatesLiberated.</p>
+
+  <ul>
+    <li>AffiliatesLiberated.com and AffiliatesLiberated.org are both available.</li>
+    <li>The name contains the word ‘affiliate’ which will help people find our project.</li>
+    <li>The word ‘liberated’ refers to Richard Stallman’s idea that <a href="http://www.gnu.org/philosophy/free-sw.html">free software is a matter of liberty, not price.</a></li>
+  </ul>
+
+</body>
+</html>

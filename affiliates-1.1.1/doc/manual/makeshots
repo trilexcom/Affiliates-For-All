@@ -1,0 +1,424 @@
+#!/bin/bash
+
+function shot {
+    if [ ! -f $1 ]; then
+        firefox -no-remote -P Screenshot \
+            http://yeltsin.metathinking.com/affiliates/screenshot/frame.html &
+
+        sleep 4
+        ID=`xwininfo -root -tree | grep 'Affiliates for All: ' |
+            sed 's/ //g; s/".*//'`
+
+        echo "Ready to take screenshot of window $ID"
+
+        import -frame -silent -window $ID $1
+        wmctrl -i -c $ID
+        sleep 1
+    fi
+}
+
+mysql --user=affiliates affiliates <<'end'
+delete from affiliates where local_username='Pete';
+end
+
+
+cat >../../public/screenshot/custom.js <<'end'
+run(function() {
+    top.resizeTo(700, 540);
+});
+
+afa.onload = cont;
+end
+
+shot logon.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 1);
+    top.resizeTo(700, 650);
+});
+
+afa.onload = cont;
+end
+
+shot signup.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 1);
+    afa.$("#chosenusername, #chosenpassword, #confirmpassword").val("Pete");
+    afa.userGood = true;
+    afa.passGood = true;
+    afa.$("#signup form").submit();
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#legal form").submit();
+    afa.$("#title").val("Mr");
+    afa.$("#firstname").val("John");
+    afa.$("#lastname").val("Smith");
+    afa.$("#email").val("John.Smith@example.com");
+    afa.$("#email_update").attr("checked", "1");
+    afa.$("#address1").val("101 Example Street");
+    afa.$("#address2").val("Example Town");
+    afa.$("#postcode").val("123456");
+    afa.$("#country").val("us");
+    afa.$("#phone").val("1234567890");
+    top.resizeTo(700, 900);
+});
+
+afa.onload = cont;
+end
+
+shot wizard.png
+
+
+mysql --user=affiliates affiliates <<'end'
+delete from affiliates where local_username='Pete';
+insert into affiliates (
+	local_username, local_password, wizard_complete, title, first_name,
+	last_name, email, country
+) values (
+	'Pete', 'Pete', true, 'Mr', 'Pete', 'Chown', 'pete@example.com', 'gb'
+);
+end
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    top.resizeTo(900, 580);
+});
+
+afa.onload = cont;
+end
+
+shot overview.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 1);
+    top.resizeTo(900, 740);
+});
+
+afa.onload = cont;
+end
+
+shot graphs.png
+
+
+mysql --user=affiliates affiliates <<'end'
+insert into orders (
+    id, affiliate, affiliate_data, status, customer_email, customer_name,
+    customer_id, total, commission
+) values (
+    '7654321',
+    (select id from affiliates where local_username = 'Pete'),
+    'mydata', 'new', 'fred@example.com', 'Fred Smith',
+    '1234567', 100, 10
+);
+
+insert into payments (affiliate, amount) values (
+    (select id from affiliates where local_username = 'Pete'),
+    10
+);
+end
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 1);
+    top.resizeTo(900, 740);
+});
+
+afa.onload = cont;
+end
+
+shot graphs2.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.location = "../orders.php";
+    top.resizeTo(1000, 550);
+});
+
+afa.onload = cont;
+end
+
+shot orders1.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.location = "../orders.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+    top.resizeTo(1000, 550);
+});
+
+afa.onload = cont;
+end
+
+shot orders2.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.location = "../payments.php";
+    top.resizeTo(1000, 550);
+});
+
+afa.onload = cont;
+end
+
+shot payments1.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+login();
+
+run(function() {
+    afa.location = "../payments.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+    top.resizeTo(1000, 550);
+});
+
+afa.onload = cont;
+end
+
+shot payments2.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 580);
+});
+
+afa.onload = cont;
+end
+
+shot overviewadmin.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 580);
+    afa.location = "../admin-overview.php";
+});
+
+afa.onload = cont;
+end
+
+shot adminfront.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 500);
+    afa.location = "../admin-overview.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 1);
+});
+
+afa.onload = cont;
+end
+
+shot downloadpayments.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 500);
+    afa.location = "../admin-overview.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#tabs > ul").tabs("select", 2);
+});
+
+afa.onload = cont;
+end
+
+shot uploadpayments.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 500);
+    afa.location = "../admin-affiliates.php";
+});
+
+afa.onload = cont;
+end
+
+shot adminaffiliates.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 1110);
+    afa.location = "../admin-affiliates.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$(".edit:not(#edit_1)").click();
+});
+
+afa.onload = cont;
+end
+
+shot editaffiliate.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(1000, 550);
+    afa.location = "../admin-orders.php";
+});
+
+afa.onload = cont;
+end
+
+shot adminorders.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(1000, 450);
+    afa.location = "../admin-orders.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+});
+
+afa.onload = cont;
+end
+
+shot adminorderlist.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(1000, 880);
+    afa.location = "../admin-orders.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$(".edit:not(#edit_1)").click();
+});
+
+afa.onload = cont;
+end
+
+shot adminorderdetails.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 550);
+    afa.location = "../admin-payments.php";
+});
+
+afa.onload = cont;
+end
+
+shot adminpayments.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 450);
+    afa.location = "../admin-payments.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+});
+
+afa.onload = cont;
+end
+
+shot adminpaymentlist.png
+
+
+cat >../../public/screenshot/custom.js <<'end'
+admin();
+
+run(function() {
+    top.resizeTo(900, 650);
+    afa.location = "../admin-payments.php";
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$("#display").click();
+    setTimeout(cont, 1000);
+});
+
+run(function() {
+    afa.$(".edit:not(#edit_1)").click();
+});
+
+afa.onload = cont;
+end
+
+shot adminpaymentdetails.png
