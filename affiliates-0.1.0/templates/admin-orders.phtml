@@ -1,0 +1,91 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="tabs" class="adminwide">
+  <ul>
+    <li><a href="#query"><span>Date Range</span></a></li>
+    <li><a href="#results"><span>Results</span></a></li>
+    <li><a href="#details"><span>Order Details</span></a></li>
+  </ul>
+  <div id="query">
+    <form method="post">
+      <table class="form">
+        <tr>
+          <td>View orders from:</td>
+          <td><input id="from" type="text" size="12"/></td>
+        </tr>
+        <tr>
+          <td>to:</td>
+          <td><input id="to" type="text" size="12"/></td>
+        </tr>
+        <tr>
+          <td class="submit" colspan="2">
+            <input id="display" type="submit" value="Display"/>
+            <input id="download" type="submit" value="Download"/>
+          </td>
+        </tr>
+      </table>
+      <div id="addnew"><a href="#">Add new</a> order.</div>
+    </form>
+  </div>
+  <div id="results">
+    <table id="restable" class="form">
+    </table>
+    <div id="navigation">
+      Page <span id="currentpage">?</span> of <span id="maxpages">?</span>.  Go to:
+      <a id="previous" href="#">Previous Page</a>,
+      <a id="next" href="#">Next Page</a>,
+      Page <span id="pagelist">?</span>.
+    </div>
+  </div>
+  <div id="details">
+    <table id="detailstable" class="form">
+      <?php foreach($v->fields->get_field_descriptions() as $details) { ?>
+        <tr>
+          <td><?php echo $details[1] ?></td>
+          <td>
+            <?php $this->make_data_field($details) ?>
+          </td>
+        </tr>
+      <?php } ?>
+      <tr>
+        <td class="submit" colspan="2">
+          <input id="details_save" type="submit" value="Save"/>
+          <input id="details_cancel" type="submit" value="Cancel"/>
+        </td>
+      </tr>
+    </table>
+    <p>Fields marked ‘ * ’ are required.</p>
+  </div>
+</div>
+
+<div id="offstart" class="dialogue" title="No More Data">You are already on the first page.</div>
+
+<div id="offend" class="dialogue" title="No More Data">You are already on the last page.</div>
+
+<div id="requiredfields" class="dialogue" title="Required Fields Empty">Please complete all required fields (those marked ‘ * ’).</div>
+
+<div id="dberror" class="dialogue" title="Invalid Data">?</div>
+
+<div id="saved" class="dialogue" title="Changes Saved">The information you entered has been saved.</div>
+
+<div id="confirmdelete" class="dialogue" title="Are you sure?">Are you sure you want to delete this record?</div>
