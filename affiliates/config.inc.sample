@@ -1,0 +1,22 @@
+<?php
+
+$affiliate_get_parameter = 'ref';
+$affiliate_cookie = 'affiliate';
+$cookie_lifetime = 30 /* days */;
+$currency = '$';
+$store_home = 'http://www.example.com/store';
+$commission_percent = 10;
+$commission_fixed = '1.00';
+
+// The following secret is used to secure communications between the shopping
+// cart and the affiliate system.  Just choose something that will be hard to
+// guess.
+
+$rpc_secret = 'changeme';
+
+// Fill in the settings for your database below.  Note that all testing has
+// been carried out on MySQL 5.0.
+
+$database_dsn = 'mysql:dbname=affiliates;host=127.0.0.1';
+$database_username = 'affiliates';
+$database_password = '';

@@ -1,0 +1,49 @@
+body {
+    font-family: Deja Vu Sans, Bitstream Vera Sans, Verdana, sans-serif
+        !important;
+}
+
+h1 {
+    text-align: center;
+}
+
+#tabs {
+    margin: 1em auto;
+    width: 30em;
+}
+
+.form {
+    margin: 1em auto;
+    background-color: #f0fff0;
+    border-collapse: collapse;
+}
+
+.form td {
+    border: 1px solid #80c080;
+    padding: 5px 10px;
+}
+
+.form .submit {
+    text-align: center;
+}
+
+.form .mergeup {
+    border-top: 0px;
+}
+
+.form .mergedown {
+    border-bottom: 0px;
+}
+
+.yes {
+    color: #408040;
+}
+
+.no {
+    color: #ff4040;
+}
+
+.dialogue {
+    font-size: small;
+    display: none;
+}
