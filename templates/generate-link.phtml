@@ -1,0 +1,73 @@
+<?php /*
+
+Copyright (c) 2008 Metathinking Ltd.
+
+Author(s):
+Tom Kadwill <tomkadwill@msn.com>
+
+This file is part of Affiliates For All.
+
+Affiliates For All is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Affiliates For All is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Affiliates For All.  If not, see
+<http://www.gnu.org/licenses/>.
+
+*/ ?>
+
+<div id="tabs" class="wide">
+  <ul>
+    <li><a href="#summary"><span><?php echo __('Generate Link') ?></span></a></li>
+    <li><a href="#commission"><span><?php echo __('Result') ?></span></a></li>
+  </ul>
+  <div id="summary">
+    <table class="form">
+      <tr>
+        <td><?php echo __('Enter URL:') ?></td>
+        <td><input id="to" type="text" size="12"/></td>
+      </tr>
+      <tr>
+        <td class="submit" colspan="2">
+          <input id="display" type="submit" value="<?php echo __('Generate Link') ?>"/>
+        </td>
+      <tr>
+      	<td>
+      		<script LANGUAGE="JavaScript">
+function testResults (form) {
+    var TestVar = form.inputbox.value;
+    alert("You typed: " + TestVar + "?ref=1");
+}
+</script>
+
+<form NAME="myform" ACTION="" METHOD="GET">Enter URL: 
+		</td>
+		<td>
+<input TYPE="text" NAME="inputbox" VALUE="">
+	</tr>
+	<tr>
+		<td class="submit" colspan="2">
+<input TYPE="button" NAME="button" Value="Generate link" onClick="testResults(this.form)">
+</form>
+      	</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="results">
+  <table id="restable" class="form">
+  </table>
+  <div id="navigation">
+    <?php echo __('Page') ?> <span id="currentpage">?</span> <?php echo __('of') ?> <span id="maxpages">?</span>.  <?php echo __('Go to:') ?>
+    <a id="previous" href="#"><?php echo __('Previous Page') ?></a>,
+    <a id="next" href="#"><?php echo __('Next Page') ?></a>,
+    <?php echo __('Page') ?> <span id="pagelist">?</span>.
+  </div>
+</div>
