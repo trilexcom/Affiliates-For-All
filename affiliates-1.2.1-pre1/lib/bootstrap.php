@@ -79,7 +79,7 @@ ini_set('include_path',
     '../templates' . PATH_SEPARATOR .
     ini_get('include_path'));
 
-set_magic_quotes_runtime(FALSE);
+ini_set('magic_quotes_runtime', 0);
 if(ini_get('magic_quotes_gpc') || get_magic_quotes_runtime()
         || ini_get('magic_quotes_sybase')) {
 
