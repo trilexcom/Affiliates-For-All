@@ -11,3 +11,10 @@ $(function() {
     $("#com7").attr("src", "graph.php?variable=commission&days=7&fromcache=0");
     $("#com7").load(graphCachePopulated);
 });
+
+function generateUrl() {
+	url = inputURL.value;
+	url += '?ref=1';
+	document.getElementById('results').innerHTML=url;
+	document.getElementById('results').target="_blank";
+}

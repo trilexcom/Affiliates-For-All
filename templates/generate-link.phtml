@@ -25,49 +25,37 @@ along with Affiliates For All.  If not, see
 
 <div id="tabs" class="wide">
   <ul>
-    <li><a href="#summary"><span><?php echo __('Generate Link') ?></span></a></li>
-    <li><a href="#commission"><span><?php echo __('Result') ?></span></a></li>
+    <li><a href="#generate"><span><?php echo __('Generate Link') ?></span></a></li>
   </ul>
-  <div id="summary">
+  <div id="generate">
     <table class="form">
-      <tr>
-        <td><?php echo __('Enter URL:') ?></td>
-        <td><input id="to" type="text" size="12"/></td>
-      </tr>
-      <tr>
-        <td class="submit" colspan="2">
-          <input id="display" type="submit" value="<?php echo __('Generate Link') ?>"/>
-        </td>
-      <tr>
-      	<td>
-      		<script LANGUAGE="JavaScript">
-function testResults (form) {
-    var TestVar = form.inputbox.value;
-    alert("You typed: " + TestVar + "?ref=1");
-}
-</script>
-
-<form NAME="myform" ACTION="" METHOD="GET">Enter URL: 
-		</td>
-		<td>
-<input TYPE="text" NAME="inputbox" VALUE="">
-	</tr>
-	<tr>
-		<td class="submit" colspan="2">
-<input TYPE="button" NAME="button" Value="Generate link" onClick="testResults(this.form)">
-</form>
-      	</td>
-      </tr>
+		<tr>
+	        <td><?php echo __('Enter your URL(s):') ?></td>
+	      </tr>
+	      <tr>
+	        <td>
+	        	<FORM NAME="inputform" ACTION="" METHOD="GET">
+	        	<?php echo __('<textarea style="resize: none;" id="inputURL" rows=6 cols=60></textarea>')?>
+	        	</FORM>
+			<br />
+	        <?php echo __('*mutliple URLs should be separated with commas')?>
+	        </td>
+	      </tr>
+		  <tr>
+			<td>
+				<?php echo __('<div style="text-align:center"><input type="button" name="linkgenbutton" onclick="generateUrl()" Value="Generate link" onClick="generateUrl();"></div>')?>
+			</td>
+		  </tr>
+ 		  <tr>
+			<td>
+				<?php echo __('Your URL(s) with affiliate ID:')?>
+				<div id="results"></div>
+			</td>
+		  </tr>
     </table>
   </div>
 </div>
 <div id="results">
   <table id="restable" class="form">
   </table>
-  <div id="navigation">
-    <?php echo __('Page') ?> <span id="currentpage">?</span> <?php echo __('of') ?> <span id="maxpages">?</span>.  <?php echo __('Go to:') ?>
-    <a id="previous" href="#"><?php echo __('Previous Page') ?></a>,
-    <a id="next" href="#"><?php echo __('Next Page') ?></a>,
-    <?php echo __('Page') ?> <span id="pagelist">?</span>.
-  </div>
 </div>
